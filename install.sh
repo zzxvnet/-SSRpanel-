@@ -30,18 +30,18 @@ cd /root
 git clone https://github.com/mzfqy/shadowsocksr
 chmod 777 * -R
 cd shadowsocksr
-echo ‘{‘ >>usermysql.json
-echo ‘    "host": "127.0.0.1",‘ >>usermysql. echo ‘    "port": 3306,‘ >>usermysql.json
-echo ‘    "user": "ssrpanel",‘ >>usermysql.json
-echo ‘    "password": "pass",‘ >>usermysql.json
-echo ‘    "db": "ssrpanel",‘ >>usermysql.json
-echo ‘    "node_id": 0,‘ >>usermysql.json
-echo ‘    "transfer_mul": 1.0,‘ >>usermysql.json
-echo ‘    "ssl_enable": 0,‘ >>usermysql.json
-echo ‘    "ssl_ca": "",‘ >>usermysql.json
-echo ‘    "ssl_cert": "",‘ >>usermysql.json
-echo ‘    "ssl_key": ""‘ >>usermysql.json
-echo ‘}‘ >>usermysql.json
+echo '{' >>usermysql.json
+echo '    "host": "127.0.0.1",' >>usermysql. echo ‘    "port": 3306,‘ >>usermysql.json
+echo '    "user": "ssrpanel",' >>usermysql.json
+echo '    "password": "pass",' >>usermysql.json
+echo '    "db": "ssrpanel",' >>usermysql.json
+echo '    "node_id": 0,' >>usermysql.json
+echo '    "transfer_mul": 1.0,' >>usermysql.json
+echo '    "ssl_enable": 0,' >>usermysql.json
+echo '    "ssl_ca": "",' >>usermysql.json
+echo '    "ssl_cert": "",' >>usermysql.json
+echo '    "ssl_key": ""' >>usermysql.json
+echo '}' >>usermysql.json
 
 
 #crontab cron
