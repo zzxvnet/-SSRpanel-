@@ -1,0 +1,8 @@
+SERVER=127.0.0.1
+PORT=443
+`nc -z -v -w5 $SERVER $PORT`
+result1=$?
+if [  "$result1" = 1 ]; then
+  cd /root/shadowsocks-py-mu/shadowsocks
+  ulimit -n 655360
+  ./logrun.sh
