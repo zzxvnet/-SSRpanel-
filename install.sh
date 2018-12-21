@@ -29,6 +29,7 @@ echo 正在配置ssr
 git clone https://github.com/mzfqy/shadowsocksr >/dev/null 2>&1
 chmod 777 * -R
 cd shadowsocksr
+./setup_cymysql2.sh
 rm usermysql.json -r
 echo '{' >>usermysql.json
 echo '    "host": "$mip",' >>usermysql.json
