@@ -32,7 +32,8 @@ chmod 777 * -R
 cd shadowsocksr
 rm usermysql.json -r
 echo '{' >>usermysql.json
-echo '    "host": "127.0.0.1",' >>usermysql. echo ‘    "port": 3306,‘ >>usermysql.json
+echo '    "host": "127.0.0.1",' >>usermysql.json
+echo '    "port": 3306,' >>usermysql.json
 echo '    "user": "ssrpanel",' >>usermysql.json
 echo '    "password": "pass",' >>usermysql.json
 echo '    "db": "ssrpanel",' >>usermysql.json
