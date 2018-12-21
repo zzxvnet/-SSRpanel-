@@ -32,10 +32,10 @@ cd shadowsocksr
 ./setup_cymysql2.sh >/dev/null 2>&1
 rm usermysql.json -r
 echo "{" >>usermysql.json
-echo "    \"host\": "$mip"," >>usermysql.json
+echo "    \"host\": \"$mip\"," >>usermysql.json
 echo "    \"port\": $port," >>usermysql.json
-echo "    \"user\": "$mid"," >>usermysql.json
-echo "    \"password\": "$mpass"," >>usermysql.json
+echo "    \"user\": \"$mid\"," >>usermysql.json
+echo "    \"password\": \"$mpass\"," >>usermysql.json
 echo "    \"db\": \"$mname\"," >>usermysql.json
 echo "    \"node_id\": $nid," >>usermysql.json
 echo "    \"transfer_mul\": $nfee," >>usermysql.json
