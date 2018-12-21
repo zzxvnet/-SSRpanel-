@@ -22,6 +22,8 @@ systemctl stop firewalld.service >/dev/null 2>&1
 systemctl disable firewalld.service>/dev/null 2>&1
 echo 正在配置准备环境
 yum remove nc -y >/dev/null 2>&1
+yum install git -y >/dev/null 2>&1
+easy_install pip >/dev/null 2>&1
 wget https://raw.githubusercontent.com/mzfqy/OneClickSsr-ssrpanel/master/cron >/dev/null 2>&1
 wget https://raw.githubusercontent.com/mzfqy/OneClickSsr-ssrpanel/master/ssr >/dev/null 2>&1
 wget https://raw.githubusercontent.com/mzfqy/OneClickSsr-ssrpanel/master/ncat-7.60-1.x86_64.rpm>/dev/null 2>&1
@@ -35,6 +37,7 @@ mv ssr /bin/ssr
 crontab cron
 cd shadowsocksr
 ./setup_cymysql2.sh >/dev/null 2>&1
+pip install -r requestment.txt >/dev/null 2>&1
 rm usermysql.json -r
 echo "{" >>usermysql.json
 echo "    \"host\": \"$mip\"," >>usermysql.json
