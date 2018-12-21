@@ -3,5 +3,4 @@
 #仅支持CENTOS7
 
 #安装
-- wget https://raw.githubusercontent.com/mzfqy/OneClickSsr-ssrpanel/master/install.sh
-sh install.sh
+- wget https://raw.githubusercontent.com/mzfqy/OneClickSsr-ssrpanel/master/install.sh && sh install.sh
