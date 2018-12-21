@@ -20,10 +20,10 @@ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime -r >/dev/null 2>&1
 echo 正在关闭防火墙
 systemctl stop firewalld.service >/dev/null 2>&1
 systemctl disable firewalld.service>/dev/null 2>&1
-iptables -F
 iptables -A INPUT ACCEPT
 iptables -A OUTPUT ACCEPT
 iptables -A FARWARD ACCEPT
+iptables -F
 service iptables save >/dev/null 2>&1
 echo 正在配置准备环境
 yum remove nc -y >/dev/null 2>&1
@@ -39,8 +39,11 @@ echo 正在安装libsodium
 yum install wget m2crypto git libsodium -y >/dev/null 2>&1
 yum -y groupinstall "Development Tools">/dev/null 2>&1
 wget https://github.com/jedisct1/libsodium/releases/download/1.0.16/libsodium-1.0.16.tar.gz >/dev/null 2>&1
-tar xf libsodium-1.0.16.tar.gz && cd libsodium-1.0.16 >/dev/null 2>&1
-./configure && make -j2 && make install >/dev/null 2>&1
+tar xf libsodium-1.0.16.tar.gz >/dev/null 2>&1
+cd libsodium-1.0.16
+./configure >/dev/null 2>&1
+make -j2 >/dev/null 2>&1
+make install >/dev/null 2>&1
 echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf
 ldconfig
 echo 正在配置ssr
