@@ -20,9 +20,6 @@ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime -r >/dev/null 2>&1
 echo 正在关闭防火墙
 systemctl stop firewalld.service >/dev/null 2>&1
 systemctl disable firewalld.service>/dev/null 2>&1
-iptables -A INPUT ACCEPT
-iptables -A OUTPUT ACCEPT
-iptables -A FARWARD ACCEPT
 iptables -F
 service iptables save >/dev/null 2>&1
 echo 正在配置准备环境
@@ -47,6 +44,7 @@ make install >/dev/null 2>&1
 echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf
 ldconfig
 echo 正在配置ssr
+cd /root
 git clone https://github.com/mzfqy/shadowsocksr >/dev/null 2>&1
 chmod 777 * -R
 mv ssr /bin/ssr
