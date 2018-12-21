@@ -21,9 +21,9 @@ echo 正在关闭防火墙
 systemctl stop firewalld.service >/dev/null 2>&1
 systemctl disable firewalld.service>/dev/null 2>&1
 iptables -F
-iptables -I INPUT ACCEPT
-iptables -I OUTPUT ACCEPT
-iptables -I FARWARD ACCEPT
+iptables -A INPUT ACCEPT
+iptables -A OUTPUT ACCEPT
+iptables -A FARWARD ACCEPT
 service iptables save >/dev/null 2>&1
 echo 正在配置准备环境
 yum remove nc -y >/dev/null 2>&1
