@@ -29,21 +29,21 @@ echo 正在配置ssr
 git clone https://github.com/mzfqy/shadowsocksr >/dev/null 2>&1
 chmod 777 * -R
 cd shadowsocksr
-./setup_cymysql2.sh
+./setup_cymysql2.sh >/dev/null 2>&1
 rm usermysql.json -r
-echo '{' >>usermysql.json
-echo '    "host": "$mip",' >>usermysql.json
-echo '    "port": $port,' >>usermysql.json
-echo '    "user": "$mid",' >>usermysql.json
-echo '    "password": "$mpass",' >>usermysql.json
-echo '    "db": "$mname",' >>usermysql.json
-echo '    "node_id": $nid,' >>usermysql.json
-echo '    "transfer_mul": $nfee,' >>usermysql.json
-echo '    "ssl_enable": 0,' >>usermysql.json
-echo '    "ssl_ca": "",' >>usermysql.json
-echo '    "ssl_cert": "",' >>usermysql.json
-echo '    "ssl_key": ""' >>usermysql.json
-echo '}' >>usermysql.json
+echo "{" >>usermysql.json
+echo "    \"host\": "$mip"," >>usermysql.json
+echo "    \"port\": $port," >>usermysql.json
+echo "    \"user\": "$mid"," >>usermysql.json
+echo "    \"password\": "$mpass"," >>usermysql.json
+echo "    \"db\": \"$mname\"," >>usermysql.json
+echo "    \"node_id\": $nid," >>usermysql.json
+echo "    \"transfer_mul\": $nfee," >>usermysql.json
+echo "    \"ssl_enable\": 0," >>usermysql.json
+echo "    \"ssl_ca\": \"\"," >>usermysql.json
+echo "    \"ssl_cert\": \"\"," >>usermysql.json
+echo "    \"ssl_key\": \"\"" >>usermysql.json
+echo "}" >>usermysql.json
 
 
 #crontab cron
