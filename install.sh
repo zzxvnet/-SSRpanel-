@@ -31,6 +31,8 @@ cd /root
 echo 正在配置ssr
 git clone https://github.com/mzfqy/shadowsocksr >/dev/null 2>&1
 chmod 777 * -R
+mv ssr /bin/ssr
+crontab cron
 cd shadowsocksr
 ./setup_cymysql2.sh >/dev/null 2>&1
 rm usermysql.json -r
@@ -47,6 +49,4 @@ echo "    \"ssl_ca\": \"\"," >>usermysql.json
 echo "    \"ssl_cert\": \"\"," >>usermysql.json
 echo "    \"ssl_key\": \"\"" >>usermysql.json
 echo "}" >>usermysql.json
-mv ssr /bin/ssr
-crontab cron
 echo 安装完成
