@@ -35,6 +35,14 @@ wget https://raw.githubusercontent.com/mzfqy/OneClickSsr-ssrpanel/master/ncat-7.
 rpm -ivh ncat-7.60-1.x86_64.rpm >/dev/null 2>&1
 ln -s /usr/bin/ncat /bin/nc >/dev/null 2>&1
 cd /root
+echo 正在安装libsodium
+yum install wget m2crypto git libsodium -y >/dev/null 2>&1
+yum -y groupinstall "Development Tools">/dev/null 2>&1
+wget https://github.com/jedisct1/libsodium/releases/download/1.0.16/libsodium-1.0.16.tar.gz >/dev/null 2>&1
+tar xf libsodium-1.0.16.tar.gz && cd libsodium-1.0.16 >/dev/null 2>&1
+./configure && make -j2 && make install >/dev/null 2>&1
+echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf
+ldconfig
 echo 正在配置ssr
 git clone https://github.com/mzfqy/shadowsocksr >/dev/null 2>&1
 chmod 777 * -R
