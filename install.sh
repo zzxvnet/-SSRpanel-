@@ -33,7 +33,7 @@ cd shadowsocksr
 rm usermysql.json -r
 echo "{" >>usermysql.json
 echo "    \"host\": \"$mip\"," >>usermysql.json
-echo "    \"port\": $port," >>usermysql.json
+echo "    \"port\": \"$mport\"," >>usermysql.json
 echo "    \"user\": \"$mid\"," >>usermysql.json
 echo "    \"password\": \"$mpass\"," >>usermysql.json
 echo "    \"db\": \"$mname\"," >>usermysql.json
