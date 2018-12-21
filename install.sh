@@ -23,9 +23,9 @@ systemctl disable firewalld.service>/dev/null 2>&1
 echo 正在配置准备环境
 yum remove nc -y >/dev/null 2>&1
 rpm -ivh ncat-7.60-1.x86_64.rpm >/dev/null 2>&1
-ln -s /usr/bin/ncat /bin/nc
+ln -s /usr/bin/ncat /bin/nc >/dev/null 2>&1
 cd /root
-正在配置ssr
+echo 正在配置ssr
 git clone https://github.com/mzfqy/shadowsocksr >/dev/null 2>&1
 chmod 777 * -R
 cd shadowsocksr
