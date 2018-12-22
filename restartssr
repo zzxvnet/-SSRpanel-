@@ -1,0 +1,3 @@
+cd /root/shadowsocksr
+sh stop.sh
+sh logrun.sh
