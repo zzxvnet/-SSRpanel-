@@ -14,3 +14,5 @@
 #安装
 
 - wget https://raw.githubusercontent.com/mzfqy/OneClickSsr-ssrpanel/master/install.sh && sh install.sh
+
+- wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh
