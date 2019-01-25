@@ -1,5 +1,5 @@
 * * * * * echo "3" > /proc/sys/vm/drop_caches
-*/2 * * * * ssr
-5 */4 * * * restartssr
-0 2 * * * reboot
+* * * * * ssr
+#5 */4 * * * restartssr
+#0 2 * * * reboot
 
